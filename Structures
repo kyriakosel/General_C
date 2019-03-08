@@ -1,0 +1,23 @@
+
+// include standard i/o library for scanf and printf
+#include <stdio.h>
+
+/* define the person struct here using the typedef syntax */
+
+typedef struct {
+	char * name;
+	int age;
+	char * status;
+} person ;
+
+int main() {
+
+		person john;
+		
+			/* testing code */
+			john.name = "John";
+			john.age = 27;
+				john.status = "single";
+			printf("%s is %d years old and is %s.\n", john.name, john.age, john.status);
+			getchar();
+}

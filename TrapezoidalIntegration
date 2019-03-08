@@ -1,0 +1,22 @@
+n = 40; % number of small trapeziums formed after splitting 
+a = 0; %  starting point or lower limit of the area
+b = 1; %  end point or upper limit of the area
+sum = 0.0;  % to find the sum 
+dx = (b-a)/(n-1); %  to find step size or height of trapezium 
+% Generating the samples 
+ 
+for i = 1:n
+    x(i) = a + (i-1)*dx;
+    y(i) =exp(x(i));
+    if ( i == 1 || i == n) % for finding the sum of fist and last ordinate
+        sum = sum + y(i)./2;
+    else
+        sum = sum + y(i); % for calculating the sum of other ordinates 
+    end
+end
+% to generate the value of function at different values of x or sample 
+
+sumoftrapezoids = sum * dx; % defining the area
+ %plot(x,y)
+%area(x,y)
+sumoftrapezoids

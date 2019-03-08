@@ -1,0 +1,56 @@
+// for scanf/printf
+#include <stdio.h>
+// for pow
+#include <math.h>
+
+// here we define PI - if we use PI in our code, the compiler will directly replace it by the number
+#define PI 3.1415926536
+float VolumeOfSphere(float radius);
+float VolumeOfCube(float heightOfCube);
+float AreaOfTriangle(float triangleBase, float triangleHeight);
+float triangleBase;
+float triangleHeight;
+float TriangleArea;
+float heightOfCube;
+float CubeArea;
+float radius;
+float SphereVolume;
+
+
+// main function - start of the program
+int main(void) {
+	//------------Triangle------------
+	triangleBase = 2.0;
+	triangleHeight = 5;
+	TriangleArea = AreaOfTriangle(triangleBase, triangleHeight);
+	printf("The area of the triangle is: %2f, \n with base %2f and height %2f", TriangleArea, triangleBase, triangleHeight);
+	getchar();
+	//--------------------------------
+	//-----------------Cube-----------
+	heightOfCube = 3.0;
+	CubeArea = VolumeOfCube(heightOfCube);
+	printf("The volume of cube is %2f", CubeArea);
+	getchar(); 
+	//----------------Sphere---------------
+	radius = 5;
+	SphereVolume = VolumeOfSphere(radius);
+	printf("The volume of sphere is %2f", SphereVolume);
+	getchar();
+	
+
+	return 0;  // end of main
+
+}//----------------triangle function-----------
+float AreaOfTriangle(float triangleBase, float triangleHeight)
+{
+	return (triangleBase*triangleHeight) / 2;
+}//--------------------------------------------
+ //----------------Volume of Cube -------------
+ float VolumeOfCube(float heightOfCube)
+ {
+ return (heightOfCube*heightOfCube*heightOfCube);
+ } 
+ float VolumeOfSphere(float radius)
+ {
+	 return 4 / 3 * PI*(radius*radius*radius);
+ }

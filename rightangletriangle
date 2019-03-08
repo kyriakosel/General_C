@@ -1,0 +1,41 @@
+// for scanf/printf
+#include <stdio.h>
+
+int main(void) {
+	int row;
+	int column;
+	int i;
+	int j;
+	int numberofrows=5;
+	char print = '#';
+	for (row = 1; row <= numberofrows; row++)//Making a triangle from 1 to 5
+	{
+		for (column = 1; column <= row; column++) //runs a loop inside the loop
+		{										  // 	
+			printf("%c", print);
+		}
+		printf("\n");
+	}
+	for (i = 1; i <= 1; i++) // reversing the triangle
+	{
+		for (j = 1; j <= 3;j++)
+		{
+			printf("%c", print);
+		}
+		printf("%c\n", print);
+	}
+	for (i = 1; i < 2; i++)
+	{
+		for (j = 1; j < 2;j++)
+		{
+			printf("%c", print);
+		}printf("%c", print);
+		{
+
+		}
+	}
+
+	getchar();
+	return 0;  // end of main
+
+}
